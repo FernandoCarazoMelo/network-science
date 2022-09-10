@@ -1,0 +1,10 @@
+# files
+*.egg-info
+
+# virtual environments
+venv*
+
+# 
+docs/graph-machine-learning-book/*
+
+.ipynb*
