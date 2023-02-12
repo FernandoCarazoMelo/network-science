@@ -21,8 +21,8 @@
     gtag('config', 'UA-170033283-1');
   </script>
 
-  <title>Forecasting time series with missing values</title>
-  <meta name="description" content="How to forecast Forecasting time series with missing values using skforecast." />
+  <title>Introducción a grafos y redes con Python</title>
+  <meta name="description" content="Teoría y ejemplos prácticos de cómo crear grafos y redes en python y NetworkX." />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -17026,7 +17026,8 @@ Adapted from GitHub theme
               <li><strong>Creación de grafos</strong>: NetworkX permite crear grafos vacíos o con nodos y enlaces
                 específicos utilizando funciones como <code>Graph()</code> (grafos no dirigidos), <code>DiGraph()</code>
                 (grafos dirigidos), o incluso para conjuntos de grafos con <code>MultiGraph()</code> y
-                <code>MultiDiGraph()</code>.</li>
+                <code>MultiDiGraph()</code>.
+              </li>
             </ul>
             <ul>
               <li><strong>Agregar nodos y enlaces</strong>: Se pueden agregar nodos y enlaces a un grafo existente de
@@ -17039,18 +17040,21 @@ Adapted from GitHub theme
               <li><strong>Información del grafo</strong>: Se pueden obtener información básica del grafo, como el número
                 de nodos y enlaces, utilizando las funciones <code>number_of_nodes()</code>,
                 <code>number_of_edges()</code>. Utilizando <code>nodes()</code> y <code>edges()</code> se accede a la
-                meta-información de nodos y ejes.</li>
+                meta-información de nodos y ejes.
+              </li>
             </ul>
             <ul>
               <li><strong>Vecinos y grado</strong>: Se pueden identificar los vecinos y el grado de un nodo utilizando
                 las funciones: <code>neighbors()</code> y <code>degree()</code>; para redes dirigidas se utiliza
-                <code>in_degree()</code> y <code>out_degree()</code>.</li>
+                <code>in_degree()</code> y <code>out_degree()</code>.
+              </li>
             </ul>
             <ul>
               <li><strong>Centralidad</strong>: Se pueden calcular medidas de centralidad, como la centralidad de grado,
                 la centralidad de intermediación, y la centralidad entre los nodos utilizando las funciones
                 <code>degree_centrality()</code>, <code>betweenness_centrality()</code> y
-                <code>closeness_centrality()</code>.</li>
+                <code>closeness_centrality()</code>.
+              </li>
             </ul>
             <ul>
               <li><strong>Componentes conectadas</strong>: Se pueden encontrar las componentes conectadas de un grafo
@@ -17059,7 +17063,8 @@ Adapted from GitHub theme
             <ul>
               <li><strong>Lectura y escritura de archivos</strong>: NetworkX permite leer y escribir grafos en varios
                 formatos de archivo utilizando <code>read_edgelist()</code>, <code>write_edgelist()</code>,
-                <code>read_adjlist()</code> y <code>write_adjlist()</code>.</li>
+                <code>read_adjlist()</code> y <code>write_adjlist()</code>.
+              </li>
             </ul>
             <ul>
               <li><strong>Algoritmos de optimización</strong>: NetworkX tiene integrados algoritmos de optimización como
@@ -17068,12 +17073,14 @@ Adapted from GitHub theme
             </ul>
             <ul>
               <li><strong>Subgrafos</strong>: Se pueden generar subgrafos de un grafo utilizando la función
-                <code>subgraph()</code>, dando una lista de nodos como <em>input</em>.</li>
+                <code>subgraph()</code>, dando una lista de nodos como <em>input</em>.
+              </li>
             </ul>
             <ul>
               <li><strong>Operaciones de conjunto</strong>: NetworkX permite realizar operaciones de conjunto en grafos
                 tales como la unión, la intersección y la diferencia utilizando <code>union()</code>,
-                <code>intersection()</code> y <code>difference()</code>.</li>
+                <code>intersection()</code> y <code>difference()</code>.
+              </li>
             </ul>
             <ul>
               <li><strong>Matriz de adyacencia</strong>: Con la función <code>nx.adjacency_matrix(G)</code> se obtiene
@@ -17142,7 +17149,8 @@ Adapted from GitHub theme
           <div class="text_cell_render border-box-sizing rendered_html">
             <p>Para crear un grafo en NetworkX, se debe crear un objeto de tipo "Grafo" utilizando la función
               <code>nx.Graph()</code>. Esta función crea un grafo vacío, sin nodos ni ejes, al que se pueden agregar
-              elementos más adelante.</p>
+              elementos más adelante.
+            </p>
 
           </div>
         </div>
@@ -17639,7 +17647,8 @@ Adapted from GitHub theme
         <div class="inner_cell">
           <div class="text_cell_render border-box-sizing rendered_html">
             <p>La información de los nodos y ejes del grafo está almacenada en los attributos <code>nodes</code> y
-              <code>edges</code>.</p>
+              <code>edges</code>.
+            </p>
 
           </div>
         </div>
@@ -17864,7 +17873,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
             <p>Como se ha explicado anteriormente, los enlaces de los grafos dirigidos tienen una dirección definida
               (los enlaces de estos grafos se representan con una flecha). El proceso de creación de un grafo dirigido
               es esquivalente al de un grafos no dirigido pero utilizando <code>DiGraph</code> en luigar de
-              <code>Graph</code>.</p>
+              <code>Graph</code>.
+            </p>
 
           </div>
         </div>
@@ -17976,7 +17986,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
           <div class="text_cell_render border-box-sizing rendered_html">
             <p>El proceso de creación de un grafo dirigido desde un DataFrame es equivalente al de los grafos no
               dirigidos mostrado en el apartado anterior, con la única diferencia de que se ha de indicar el argumento
-              <code>create_using = nx.DiGraph</code>.</p>
+              <code>create_using = nx.DiGraph</code>.
+            </p>
 
           </div>
         </div>
@@ -18186,7 +18197,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
               <code>4</code> y <code>1</code>, es decir, existen dos caminos posibles de orden 2 que los conectan: el
               <code>2-4-5</code> y el <code>2-1-5</code>. Por ese motivo, si se multiplica la matriz de adyacencia por
               sí misma, el elemento [2, 5] de la matriz de distancias tiene el valor 2. Lo que indica que existen dos
-              caminos de distancia 2 entre los nodos 2 y 5.</p>
+              caminos de distancia 2 entre los nodos 2 y 5.
+            </p>
 
           </div>
         </div>
@@ -18272,7 +18284,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
         <div class="inner_cell">
           <div class="text_cell_render border-box-sizing rendered_html">
             <p>También se puede calcular el camino más corto (shortest path) utilizando directamente la función
-              <code>nx.shortest_path</code>.</p>
+              <code>nx.shortest_path</code>.
+            </p>
 
           </div>
         </div>
@@ -18540,7 +18553,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
               definida su posición se representan los nodos y los ejes. Para este ejemplo se utiliza el
               <em>spring_layout</em>, pero hay <a
                 href="https://networkx.org/documentation/stable/reference/drawing.html#module-networkx.drawing.layout">muchos
-                más</a>.</p>
+                más</a>.
+            </p>
 
           </div>
         </div>
@@ -18697,7 +18711,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
             <p>Para crear un grafo bipartito NetworkX se utiliza el método <code>add_nodes_from()</code> con el que se
               agregan los nodos indicando el tipo con el argumento <code>bipartite</code> y luego se utiliza el método
               <code>add_edges_from()</code> para agregar las relaciones entre ellos. A continuación, se muesra un
-              ejemplo de cómo crear un grafo bipartito con dos conjuntos de nodos llamados "grupo A" y "grupo B".</p>
+              ejemplo de cómo crear un grafo bipartito con dos conjuntos de nodos llamados "grupo A" y "grupo B".
+            </p>
 
           </div>
         </div>
@@ -18872,7 +18887,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
           <div class="text_cell_render border-box-sizing rendered_html">
             <p>En el código anterior se utiliza la función <em>spring_layout</em> para posicionar los nodos en el
               gráfico. Con el arguemento <code>with_labels=True</code> se muestran las etiquetas de los nodos y con
-              <code>node_color</code>se asigna el color de cada nodo.</p>
+              <code>node_color</code>se asigna el color de cada nodo.
+            </p>
 
           </div>
         </div>
@@ -18964,7 +18980,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
             <p>En la matoria de los problemas de grafos reales, se dispone de información adicional de nodos y ejes. Los
               atributos de los nodos se añaden con el método
               <code>networkx.set_node_atributes(Grafo, diccionario, nombre)</code> y los atributos de los ejes se añaden
-              con el método <code>networkx.set_edge_atributes()</code>.</p>
+              con el método <code>networkx.set_edge_atributes()</code>.
+            </p>
 
           </div>
         </div>
@@ -19054,7 +19071,8 @@ Ejes del grafo: [(&#39;A&#39;, &#39;B&#39;), (&#39;A&#39;, &#39;C&#39;), (&#39;B
             <p>Para acceder a los atributos de nodos y ejes (meta-información) se utiliza
               <code>G.nodes(data=True)</code> o <code>G.edges(data=True)</code>.
               Estos comandos devuelven una estructura en forma de diccionario donde la clave es el nombre del nodo y el
-              valor contiene todos los atributos.</p>
+              valor contiene todos los atributos.
+            </p>
 
           </div>
         </div>
