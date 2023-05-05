@@ -19,6 +19,8 @@ netwulf
 nxviz
 plotly
 nbformat
+rpy2
+ipycytoscape
 -e .
 
 
